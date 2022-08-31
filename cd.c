@@ -22,7 +22,6 @@ void cd_dot(data_shell *datash)
 		free(cp_pwd);
 		return;
 	}
-
 	if (_strcmp("/", cp_pwd) == 0)
 	{
 		free(cp_pwd);
