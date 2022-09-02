@@ -123,6 +123,47 @@ void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 	if (error == 0)
 	{
 		free(counter);
-		return;
+		return
+	}
+	_strcpy(error, datash->av[0]);
+	_strcat(error, ": ");
+	_strcat(error, counter);
+	_strcat(error, msg2);
+	_strcat(error, msg);
+	_strcat(error, msg3);
+	_strcat(error, "\0");
+
+	write(STDERR_FILENO, error, length);
+	free(error);
+	free(counter);
+}
+
+/**
+ * check_syntax_error -> intermediate function to find
+ * and print ba syntax error
+ * @datash: data structure
+ * @input: input string
+ * Return: 1 if tere is an error, 0 in other case
+ */
+int check_syntax_error(data_shell *datash, char *input)
+{
+	int begin = 0;
+	int f_char = 0;
+	int i = 0;
+
+	f_char = first_char(input, &begin);
+	if  (f_char == -1)
+	{
+		print_syntax_error(datash, input, begin, 0);
+		return (1);
 	}
 
+	i = error_sep_op(input + begin, 0, *(input + length));
+	if (i != 0)
+	{
+		print_syntax_error(datash, input, begim + i, 1);
+		return (1);
+	}
+
+	return (0);
+}
