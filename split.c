@@ -64,7 +64,7 @@ void add_nodes(sep_list **head_s, line_list **head_l, char *input)
 
 		if (input[i] == '|' || input[i] == '&')
 		{
-			add_sep_node_end(gead_s, input[i]);
+			add_sep_node_end(head_s, input[i]);
 			i++;
 		}
 	}
