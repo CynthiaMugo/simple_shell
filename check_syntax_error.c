@@ -123,7 +123,7 @@ void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 	if (error == 0)
 	{
 		free(counter);
-		return
+		return;
 	}
 	_strcpy(error, datash->av[0]);
 	_strcat(error, ": ");
