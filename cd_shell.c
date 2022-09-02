@@ -19,7 +19,7 @@ int cd_shell(data_shell *datash)
 		isddash = _strcmp("--", dir);
 	}
 
-	if (dir == NULL || !ishome || !ishome2 ||isddash)
+	if (dir == NULL || !ishome || !ishome2 || isddash)
 	{
 		cd_to_home(datash);
 		return (1);
