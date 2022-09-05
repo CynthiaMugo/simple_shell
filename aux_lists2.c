@@ -30,7 +30,7 @@ r_var _add_rvar_node(r_var **head, int lvar, char *val, int lval)
 	}
 	else
 	{
-		while (temp->mext != NULL)
+		while (temp->next != NULL)
 			temp = temp->next;
 		temp->next = new;
 	}
