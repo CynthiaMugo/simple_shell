@@ -37,6 +37,7 @@ typedef struct data
 	char *input;
 	char **args;
 	int status;
+	int counter;
 	char **_environ;
 	char *pid;
 } data_shell;
