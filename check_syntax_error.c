@@ -159,7 +159,7 @@ int check_syntax_error(data_shell *datash, char *input)
 		return (1);
 	}
 
-	i = error_sep_op(input + begin, 0, *(input + length));
+	i = error_sep_op(input + begin, 0, *(input + lenght));
 	if (i != 0)
 	{
 		print_syntax_error(datash, input, begin + i, 1);

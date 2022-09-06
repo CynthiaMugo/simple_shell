@@ -122,7 +122,7 @@ void cd_previous(data_shell *datash)
 
 	free(cp_pwd);
 	if (p_oldpwd)
-		return (cp_oldpwd);
+		free(cp_oldpwd);
 
 	datash->status = 0;
 
