@@ -8,7 +8,7 @@
 int cd_shell(data_shell *datash)
 {
 	char *dir;
-	int ishome, ishome2, isdash;
+	int ishome, ishome2, isddash;
 
 	dir = datash->args[1];
 
