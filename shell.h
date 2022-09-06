@@ -30,7 +30,7 @@ extern char **environ;
  * @pid: process ID of shell
  */
 
-typdef struct data
+typedef struct data
 {
 	char **av;
 	char *input;
