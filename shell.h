@@ -94,7 +94,7 @@ typedef struct builtin_s
 {
 	char *name;
 	int (*f)(data_shell *datash);
-} builtin_s;
+} builtin_t;
 
 /* aux_lists.c */
 sep_list *add_sep_node_end(sep_list **head, char sep);
