@@ -64,7 +64,7 @@ void add_nodes(sep_list **head_s, line_list **head_l, char *input)
 
 		if (input[i] == '|' || input[i] == '&')
 		{
-			add_sep_node_end(gead_s, input[i]);
+			add_sep_node_end(head_s, input[i]);
 			i++;
 		}
 	}
@@ -100,7 +100,7 @@ void go_next(sep_list **list_s, line_list **list_l, data_shell *datash)
 		{
 			if (ls_s->separator == '&' || ls_s->separator == ';')
 				loop_sep = 0;
-			if (ls_s->seaparator == '|')
+			if (ls_s->separator == '|')
 				ls_l = ls_l->next, ls_s = ls_s->next;
 		}
 		else

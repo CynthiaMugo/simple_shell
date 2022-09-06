@@ -11,10 +11,10 @@ void free_data(data_shell *datash)
 
 	for (i = 0; datash->_environ[i]; i++)
 	{
-		free(datash->environ[i]);
+		free(datash->_environ[i]);
 	}
 
-	free(datash->environ);
+	free(datash->_environ);
 	free(datash->pid);
 }
 
@@ -36,7 +36,7 @@ void set_data(data_shell *datash, char **av)
 
 	for (i = 0; environ[i]; i++)
 		;
-	datash->environ = malloc(sizeof(char *) * (i + 1));
+	datash->_environ = malloc(sizeof(char *) * (i + 1));
 
 	for (i = 0; environ[i]; i++)
 	{

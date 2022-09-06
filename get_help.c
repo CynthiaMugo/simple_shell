@@ -17,7 +17,7 @@ int get_help(data_shell *datash)
 	else if (_strcmp(datash->args[1], "unsetenv") == 0)
 		aux_help_unsetenv();
 	else if (_strcmp(datash->args[1], "help") == 0)
-		aux_help;
+		aux_help();
 	else if (_strcmp(datash->args[1], "exit") == 0)
 		aux_help_exit();
 	else if (_strcmp(datash->args[1], "cd") == 0)

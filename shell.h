@@ -95,7 +95,7 @@ typedef struct builtin_s
 {
 	char *name;
 	int (*f)(data_shell *datash);
-} builtin_s;
+} builtin_t;
 
 /* aux_lists.c */
 sep_list *add_sep_node_end(sep_list **head, char sep);
@@ -108,7 +108,7 @@ r_var *add_rvar_node(r_var **head, int lvar, char *var, int lval);
 void free_rvar_list(r_var **head);
 
 /* aux_str functions */
-char *strcat(char *dest, const char *src);
+char *_strcat(char *dest, const char *src);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 char *_strchr(char *s, char c);

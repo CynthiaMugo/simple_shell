@@ -9,7 +9,7 @@
  * @lval: length of the value
  * Return: address of the head
  */
-r_var _add_rvar_node(r_var **head, int lvar, char *val, int lval)
+r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 {
 	r_var *new, *temp;
 
@@ -30,7 +30,7 @@ r_var _add_rvar_node(r_var **head, int lvar, char *val, int lval)
 	}
 	else
 	{
-		while (temp->mext != NULL)
+		while (temp->next != NULL)
 			temp = temp->next;
 		temp->next = new;
 	}

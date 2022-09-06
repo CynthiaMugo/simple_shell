@@ -34,7 +34,7 @@ int error_sep_op(char *input, int i, char last)
 		return (error_sep_op(input + 1, i + 1, last));
 
 	if (*input == ';')
-		if (last == '|' || last == '&' || lat == ';')
+		if (last == '|' || last == '&' || last == ';')
 			return (i);
 
 	if (*input == '|')
@@ -113,6 +113,7 @@ void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 
 	if (input[i] == '&')
 		msg = (input[i + 1] == '&' ? "&&" : "&");
+
 	msg2 = ": Syntax error: \"";
 	msg3 = "\" unexpected\n";
 	counter = aux_itoa(datash->counter);
@@ -161,7 +162,7 @@ int check_syntax_error(data_shell *datash, char *input)
 	i = error_sep_op(input + begin, 0, *(input + length));
 	if (i != 0)
 	{
-		print_syntax_error(datash, input, begim + i, 1);
+		print_syntax_error(datash, input, begin + i, 1);
 		return (1);
 	}
 
