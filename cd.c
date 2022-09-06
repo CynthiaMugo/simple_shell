@@ -98,7 +98,7 @@ void cd_previous(data_shell *datash)
 	char pwd[PATH_MAX];
 	char *p_pwd, *p_oldpwd, *cp_pwd, *cp_oldpwd;
 
-	getcwd(pwd, sizeof(cwd));
+	getcwd(pwd, sizeof(pwd));
 	cp_pwd = _strdup(pwd);
 
 	p_oldpwd = _getenv("OLDPWD", datash->_environ);

@@ -48,8 +48,8 @@ char *error_env(data_shell *datash)
 char *error_path_126(data_shell *datash)
 {
 	int length;
-	char *error;
 	char *ver_str;
+	char *error;
 
 	ver_str = aux_itoa(datash->counter);
 	length = _strlen(datash->av[0]) + _strlen(ver_str);
