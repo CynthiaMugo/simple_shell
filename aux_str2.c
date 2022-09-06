@@ -49,7 +49,7 @@ int cmp_chars(char str[], const char *delim)
 {
 	unsigned int i, j, k;
 
-	for (i = 0; k = 0; str[i]; i++)
+	for (i = 0, k = 0; str[i]; i++)
 	{
 		for (j = 0; delim[j]; j++)
 		{
@@ -127,7 +127,7 @@ int _isdigit(const char *s)
 {
 	unsigned int i;
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; s[i]; i++)
 	{
 		if (s[i] < 48 || s[i] > 57)
 			return (0);
