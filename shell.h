@@ -9,7 +9,7 @@
 # include <sys/stat.h>
 # include <sys/types.h>
 # include <sys/wait.h>
-# include <signal.h>
+# include <string.h>
 # include <errno.h>
 # include <limits.h>
 
@@ -45,6 +45,7 @@ typdef struct data
  * struct sep_list_s - single linked list
  * @separator: ; & |
  * @next: next node
+ * Description: single linked list to store separators
  */
 
 typedef struct sep_list_s
@@ -57,7 +58,7 @@ typedef struct sep_list_s
  * struct line_list_s - single linked list
  * @line: command line
  * @next: the next node
- *
+ * Description: single linked list to store command lines
  */
 
 typedef struct line_list_s
@@ -72,7 +73,7 @@ typedef struct line_list_s
  * @val: value of variable
  * @len_val: length of value
  * @next: next node
- *
+ * Description: single linked list to store variables
  */
 
 typedef struct r_var_list
